@@ -37,11 +37,7 @@ export default function HomePageScreen({ navigation }: any) {
         .delete(`contact/${id}`, config)
         .then((res) => {
           const newCoontact = contact.filter((elem) => elem.id !== id);
-          console.log(id);
-          console.log(res);
-          // if (res.status === 200) {
           Alert.alert("contato excluido");
-          // }
           setContact(newCoontact);
         })
         .catch((err) => console.log(err));
